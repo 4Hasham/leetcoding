@@ -1,5 +1,4 @@
 #include<iostream>
-#include<vector>
 
 class Solution {
 public:
@@ -34,7 +33,6 @@ public:
             if(checkValidity(l, c)) {
                 if(s.length() + 1 <= n) {
                     s += c;
-                    std::cout << s << std::endl;
                     if(s.length() != n) {
                         count += generatePerm(s, c, n);
                         s.pop_back();
@@ -44,7 +42,6 @@ public:
                 }
                 else {
                     s[s.length() - 1] = c;
-                    std::cout << s << std::endl;
                     ++count;
                 }
             }
